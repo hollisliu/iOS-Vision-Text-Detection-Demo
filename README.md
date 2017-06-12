@@ -13,4 +13,4 @@ This demo app:
 Running this app requires at least Xcode 9 beta 1 and a physical device running iOS 11 beta 1
 
 ## Other Notes
-There is no OCR framework in the iOS SDK still. As a result a OCR engine is needed to recognize detected text content.
+There is no OCR framework in the iOS SDK still. As a result a seperate OCR engine is needed to recognize detected text content.
