@@ -103,7 +103,7 @@ class VNTextViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             requestOptions = [.cameraIntrinsics:camData]
         }
         
-        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: 6, options: requestOptions)
+        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: CGImagePropertyOrientation(rawValue: 6)!, options: requestOptions)
         
         do {
             try imageRequestHandler.perform(self.requests)
