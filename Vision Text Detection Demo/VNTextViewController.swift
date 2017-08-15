@@ -14,7 +14,7 @@ class VNTextViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     private var requests = [VNRequest]()
     private let session = AVCaptureSession()
     
-    @IBOutlet weak var previewView: UIView!
+    @IBOutlet weak var previewView: PreviewView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +113,7 @@ class VNTextViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
     
     func setupCamera() {
+        previewView.session = session
         let availableCameraDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back)
         
         var activeDevice: AVCaptureDevice?
@@ -133,22 +134,17 @@ class VNTextViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         } catch {
             print("no camera")
         }
-        
+        session.sessionPreset = .high
         guard auth() else {return}
         
         let videoOutput = AVCaptureVideoDataOutput()
-        
+
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "buffer queue", qos: .userInteractive, attributes: .concurrent, autoreleaseFrequency: .inherit, target: nil))
         
         if session.canAddOutput(videoOutput) {
             session.addOutput(videoOutput)
         }
-        
-        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
-        
-        previewLayer.frame = previewView.bounds
-        previewView.layer.addSublayer(previewLayer)
-        
+        previewView.videoPreviewLayer.videoGravity = .resize
         session.startRunning()
     }
     

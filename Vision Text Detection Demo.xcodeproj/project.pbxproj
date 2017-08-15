@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20272F581F39F2E400540574 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20272F571F39F2E400540574 /* PreviewView.swift */; };
 		CB9A44BF1EEEC0D4000A9D1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A44BE1EEEC0D4000A9D1F /* AppDelegate.swift */; };
 		CB9A44C11EEEC0D4000A9D1F /* VNTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A44C01EEEC0D4000A9D1F /* VNTextViewController.swift */; };
 		CB9A44C41EEEC0D4000A9D1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9A44C21EEEC0D4000A9D1F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20272F571F39F2E400540574 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		CB9A44BB1EEEC0D4000A9D1F /* Vision Text Detection Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vision Text Detection Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9A44BE1EEEC0D4000A9D1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB9A44C01EEEC0D4000A9D1F /* VNTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNTextViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				CB9A44C51EEEC0D4000A9D1F /* Assets.xcassets */,
 				CB9A44C71EEEC0D4000A9D1F /* LaunchScreen.storyboard */,
 				CB9A44CA1EEEC0D4000A9D1F /* Info.plist */,
+				20272F571F39F2E400540574 /* PreviewView.swift */,
 			);
 			path = "Vision Text Detection Demo";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				CB9A44C11EEEC0D4000A9D1F /* VNTextViewController.swift in Sources */,
 				CB9A44BF1EEEC0D4000A9D1F /* AppDelegate.swift in Sources */,
+				20272F581F39F2E400540574 /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
